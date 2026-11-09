@@ -2368,7 +2368,7 @@ emailId（信的 id）、kind（flight/hotel/transport/food/spot）、title（�
   [['13:50', 82, 'GrabFood ChaTraMue 手標泰奶'], ['14:17', 121, 'GrabFood 打拋飯'], ['20:26', 93, 'GrabFood 煎蛋飯'], ['20:41', 82, 'GrabFood ChaTraMue 手標泰奶']].forEach(([tm, a, n]) => ex('2026-10-24', tm, n, a, 'THB', 'food'));
   ex('2026-10-25', '01:39', 'Grab 前往廊曼機場', 364, 'THB', 'transport');
   ex('2026-10-25', '03:00', '泰國獅航 SL396 機票', 12856, 'TWD', 'transport');
-  S.trips.unshift(t); S.seededSample = true; save(); render();
+  S.trips = [t]; S.tripId = t.id; S.seededSample = true; save(); render();
 })();
 /* 試用行程補上 10/22 雲之尚·Zero 別墅（使用者確認有入住，之後全額退款） */
 (() => {
